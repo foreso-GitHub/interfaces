@@ -16,6 +16,12 @@ type Transaction interface {
 	crypto.Signable
 
 	GetTransactionType() TransactionType
+
+	GetDestination() core.Address
+	GetSequence() uint64
+	GetAmount() int64
+	GetGas() int64
+	GetType() string
 }
 
 type TransactionWithData interface {
